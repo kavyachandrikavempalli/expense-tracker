@@ -1,14 +1,14 @@
-# Use OpenJDK as base image
-FROM openjdk:17-jdk-slim
+# Start from a base Java image
+FROM openjdk:18-jdk-alpine
 
 # Set working directory
 WORKDIR /app
 
-# Copy the jar file (replace with your actual jar name if needed)
-COPY target/*.jar app.jar
+# Copy the built jar file into the image
+COPY target/expensetracker-0.0.1-SNAPSHOT.jar app.jar
 
-# Expose the port your app runs on
+# Expose the port Spring Boot runs on
 EXPOSE 8080
 
-# Run the app
+# Command to run the app
 ENTRYPOINT ["java", "-jar", "app.jar"]
