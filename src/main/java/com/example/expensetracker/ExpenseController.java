@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://expense-tracker-frontend-hazel-five.vercel.app/")
 @RequestMapping("/api/expenses")
 public class ExpenseController {
 
